@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div>
+        <div>
+            1. Самый простой AJAX запрос. PHP возвращает просто строку текста
+        </div>
+
+        <br>
+
+        <button id="ajax-simple-text" type="button">Получить строку текста через AJAX</button>
+        <a href="/simple-text.php" target="_blank">Перейти по этому же URLу в браузере</a>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="send-params-block">
+        <div>
+            2. Отправляем параметры, которые будут доступны в PHP, и формируем ответ на основании этих параметров
+        </div>
+
+        <br>
+
+        <form method="GET" target="_blank" action="/with-params.php">
+            <label>
+                Параметр 1
+                <input id="param-1" name='PARAM_1' type="text">
+            </label>
+            <label>
+                Параметр 2
+                <input id="param-2" name="PARAM_2" type="text">
+            </label>
+
+            <button id="ajax-send-params" type="button">Отправить параметры через AJAX</button>
+            <button type="submit">Сделать запрос классическим образом</button>
+        </form>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="get-html">
+        <div>
+            3. Через AJAX можно получать готовый HTML для добавления на страницу
+        </div>
+
+        <br>
+
+        <button id="ajax-get-html" type="button">Получить HTML через AJAX</button>
+        <a href="/return_html.php?NEXT_PRODUCT_NUM=1" target="_blank">Получить HTML классическим образом (обращаю внимание на параметр NEXT_PRODUCT_NUM)</a>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="get-json-object">
+        <div>
+            4. Вместо HTML через AJAX можно получать данные, упакованные в JavaScript (JSON) объект, а HTML генерировать уже на месте
+        </div>
+
+        <br>
+
+        <button id="ajax-get-json-object" type="button">Получить JSON-объект через AJAX</button>
+        <a href="/return_json_object.php?NEXT_PRODUCT_NUM=1" target="_blank">Получить JSON-объект классическим образом (обращаю внимание на параметр NEXT_PRODUCT_NUM)</a>
+    </div>
+
+    <script src="/jquery-3.3.1.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
